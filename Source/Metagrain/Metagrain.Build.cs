@@ -48,5 +48,8 @@ public class Metagrain : ModuleRules
                 "AudioExtensions"
             }
         );
+
+        PrivateDefinitions.Add("METASOUND_PLUGIN=Metagrain");
+        PrivateDefinitions.Add("METASOUND_MODULE=Metagrain");
     }
 }

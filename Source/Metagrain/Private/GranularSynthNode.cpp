@@ -1,6 +1,6 @@
 // Copyright Epic Games, Inc. All Rights Reserved. // Or your copyright notice
 
-#include "Metagrain.h" 
+#include "Metagrain.h"
 #include "MetasoundExecutableOperator.h"
 #include "MetasoundPrimitives.h"
 #include "MetasoundNodeRegistrationMacro.h"
@@ -1034,14 +1034,7 @@ namespace Metasound
     };
 
     // --- Node Facade ---
-    class FGranularSynthNode : public FNodeFacade 
-    {
-    public:
-        FGranularSynthNode(const FNodeInitData& InitData) 
-            : FNodeFacade(InitData.InstanceName, InitData.InstanceID, TFacadeOperatorClass<FGranularSynthOperator>()) 
-        {
-        }
-    };
+    using FGranularSynthNode = TNodeFacade<FGranularSynthOperator>;
 
     METASOUND_REGISTER_NODE(FGranularSynthNode) 
 }

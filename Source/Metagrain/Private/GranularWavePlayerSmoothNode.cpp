@@ -1348,15 +1348,7 @@ namespace Metasound
     };
 
     // --- Node ---
-    class FGranularWavePlayerSmoothNode : public FNodeFacade
-    {
-    public:
-        FGranularWavePlayerSmoothNode(const FNodeInitData& InitData)
-            : FNodeFacade(InitData.InstanceName, InitData.InstanceID, TFacadeOperatorClass<FGranularWavePlayerSmoothOperator>())
-        {
-        }
-
-    };
+    using FGranularWavePlayerSmoothNode = TNodeFacade<FGranularWavePlayerSmoothOperator>;
     // --- Registration ---
     METASOUND_REGISTER_NODE(FGranularWavePlayerSmoothNode)
 }
